@@ -1,0 +1,150 @@
+/* =========================
+   WRAPPER GLOBAL
+========================= */
+.navbar-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #ddd;
+  font-family: Arial, sans-serif;
+}
+
+/* =========================
+   TOP BAR
+========================= */
+.navbar-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px;
+  background-color: #ffffff;
+}
+
+/* LEFT (logo + nom) */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  height: 42px;
+  width: auto;
+}
+
+.brand-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #222;
+}
+
+/* RIGHT (info + urgence + burger) */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Contact info (desktop only) */
+.navbar-info {
+  text-align: right;
+  font-size: 13px;
+  line-height: 1.2;
+  color: #333;
+}
+
+.navbar-icon {
+  font-size: 16px;
+}
+
+/* Urgence button */
+.urgence-btn {
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 12px;
+}
+
+.urgence-btn:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+  transition: 0.2s;
+}
+
+/* Burger menu */
+.burger {
+  font-size: 26px;
+  cursor: pointer;
+  display: none; /* caché desktop */
+  user-select: none;
+}
+
+/* =========================
+   BOTTOM BAR (DESKTOP NAV)
+========================= */
+.navbar-bottom {
+  display: flex;
+  gap: 25px;
+  padding: 10px 16px;
+  background-color: #f8f9fa;
+  border-top: 1px solid #eee;
+}
+
+.navbar-bottom a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.navbar-bottom a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   MOBILE MENU (HAMBURGER)
+========================= */
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  background-color: #f8f9fa;
+  padding: 12px 16px;
+  gap: 12px;
+  border-top: 1px solid #ddd;
+}
+
+.mobile-menu a {
+  text-decoration: none;
+  color: #222;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+
+  /* cacher infos contact sur mobile */
+  .navbar-info {
+    display: none;
+  }
+
+  /* afficher burger */
+  .burger {
+    display: block;
+  }
+
+  /* cacher navbar bottom desktop */
+  .navbar-bottom {
+    display: none;
+  }
+
+  /* ajustement spacing top bar */
+  .navbar-top {
+    padding: 10px 12px;
+  }
+
+  .brand-name {
+    font-size: 16px;
+  }
+}

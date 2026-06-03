@@ -1,0 +1,61 @@
+/* src/components/layout/Footer.css */
+
+.footer-wrapper {
+  background-color: #f8f9fa;
+  padding: 20px 0;
+  border-top: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* LEFT section (infos) */
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ICONS */
+.footer-icon {
+  font-size: 16px;
+}
+
+/* RIGHT section (nav links) */
+.footer-right {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.footer-right a {
+  text-decoration: none;
+  color: black;
+}
+
+.footer-right a:hover {
+  text-decoration: underline;
+}
+
+/* ======= RESPONSIVE ======= */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-right {
+    gap: 10px;
+  }
+}
