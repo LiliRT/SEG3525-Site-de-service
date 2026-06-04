@@ -2,8 +2,8 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import Layout from '../components/layout/Layout';
-import vet1 from '../assets/images/vet1.jpg';
-import vet2 from '../assets/images/vet2.jpg';
+import vet1 from '../images/vet1.jpg';
+import vet2 from '../images/vet2.jpg';
 
 function About() {
   return (

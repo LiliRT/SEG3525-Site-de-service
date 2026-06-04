@@ -134,3 +134,185 @@
     margin-bottom: 10px;
   }
 }
+
+
+.calendar-day {
+  min-height: 50px;
+}
+
+@media (max-width: 768px) {
+
+  .calendar-day {
+    min-height: 40px;
+    font-size: 0.9rem;
+  }
+
+}
+
+.appointment-stepper {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 3rem;
+
+}
+
+.step-item {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  min-width: 120px;
+
+}
+
+.step-circle {
+
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+
+  background: white;
+  border: 3px solid #adb5bd;
+
+  color: #adb5bd;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-weight: bold;
+
+  transition: all 0.3s ease;
+
+}
+
+.step-circle.active {
+
+  background: #0d6efd;
+  border-color: #0d6efd;
+
+  color: white;
+
+}
+
+.step-line {
+
+  width: 120px;
+  height: 4px;
+
+  background: #dee2e6;
+
+  margin-bottom: 28px;
+
+  transition: all 0.3s ease;
+
+}
+
+.step-line.active {
+
+  background: #0d6efd;
+
+}
+
+.step-item span {
+
+  margin-top: 10px;
+
+  font-size: 0.9rem;
+  text-align: center;
+
+}
+
+@media (max-width: 768px) {
+
+  .step-item {
+    min-width: 80px;
+  }
+
+  .step-line {
+    width: 50px;
+  }
+
+  .step-item span {
+    font-size: 0.75rem;
+  }
+
+}
+
+.calendar-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(7, 1fr);
+
+  gap: 8px;
+
+}
+
+.calendar-header {
+
+  text-align: center;
+
+  font-weight: 600;
+
+  padding: 10px;
+
+}
+
+.calendar-cell {
+
+  min-height: 50px;
+
+}
+
+.calendar-button {
+
+  width: 100%;
+  height: 50px;
+
+}
+
+.calendar-button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+
+  .calendar-grid {
+
+    gap: 4px;
+
+  }
+
+  .calendar-button {
+
+    height: 40px;
+    padding: 0;
+
+    font-size: 0.9rem;
+
+  }
+
+}
+
+
+.contact-img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+  .contact-img {
+    height: 300px;
+    margin-top: 1rem;
+  }
+}

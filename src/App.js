@@ -1,3 +1,4 @@
+/* src/App.js */
 import React from 'react';
 import './App.css';
 
@@ -7,24 +8,28 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
-
-// pages futures
 import Emergency from './pages/Emergency';
+import EmergencyConfirmation from './pages/EmergencyConfirmation';
 import Appointment from './pages/Appointment';
+import AppointmentConfirmation from './pages/AppointmentConfirmation';
+import AppointmentSchedule from './pages/AppointmentSchedule';
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-
         <Route path="/" element={<Home />} />
+
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
         <Route path="/contact" element={<Contact />} />
 
         <Route path="/emergency" element={<Emergency />} />
-        <Route path="/appointment" element={<Appointment />} />
+        <Route path="/emergency-confirmation" element={<EmergencyConfirmation />} />
 
+        <Route path="/appointment" element={<Appointment />} />
+        <Route path="/appointment-schedule" element={<AppointmentSchedule />} />
+        <Route path="/appointment-confirmation" element={<AppointmentConfirmation />} />
       </Routes>
     </BrowserRouter>
   );

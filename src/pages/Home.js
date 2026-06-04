@@ -1,22 +1,22 @@
+// src/pages/Home.js
 import React, { useState, useEffect } from 'react';
 import { Button, Container, Row, Col } from 'react-bootstrap';
-import heroImage from '../assets/images/hero.jpg';
+import heroImage from '../images/hero.jpg';
 import { Telephone, GeoAlt, Calendar, ExclamationTriangle } from 'react-bootstrap-icons';
 import Layout from '../components/layout/Layout';
 import { useNavigate } from 'react-router-dom';
 
-function Home() {
-  const slogans = [
+const slogans = [
     'Nous prenons soin de vos compagnons.',
     'Votre animal, notre priorité.',
     'Des soins vétérinaires de confiance.',
-  ];
+];
 
+function Home() {
   const [current, setCurrent] = useState(0);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const navigate = useNavigate();
 
-  // Changer le slogan toutes les 3 secondes
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent(prev => (prev + 1) % slogans.length);
@@ -24,14 +24,13 @@ function Home() {
     return () => clearInterval(interval);
   }, []);
 
-  // Détecter le resize pour mobile/desktop
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth < 768);
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  // ---------- Version Mobile ----------
+  // Version mobile
   if (isMobile) {
     return (
     <Layout>
@@ -77,7 +76,7 @@ function Home() {
     );
   }
 
-  // ---------- Version Desktop ----------
+  // Version ordinateur
   return (
   <Layout>
     <div className="home-desktop">
@@ -87,12 +86,16 @@ function Home() {
             <h1>Clinique Vétérinaire</h1>
             <h4 className="text-muted">{slogans[current]}</h4>
             <div className="mt-3">
-              <Button variant="danger" className="me-2">
+              <Button variant="danger" className="me-2" onClick={() => navigate('/emergency')}>
                 <ExclamationTriangle className="me-1" />
                 URGENCE
               </Button>
-              <Button variant="primary">
-                <Calendar className="me-1" />
+              <Button
+                variant="primary"
+                onClick={() =>
+                  navigate('/appointment')
+                }
+              >
                 Prendre rendez-vous
               </Button>
             </div>

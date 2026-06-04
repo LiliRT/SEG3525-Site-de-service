@@ -1,6 +1,6 @@
-/* =========================
-   WRAPPER GLOBAL
-========================= */
+/* src/components/layout/Footer.css */
+
+/* Wrapper */
 .navbar-wrapper {
   width: 100%;
   display: flex;
@@ -9,9 +9,7 @@
   font-family: Arial, sans-serif;
 }
 
-/* =========================
-   TOP BAR
-========================= */
+/* Navbar top */
 .navbar-top {
   display: flex;
   justify-content: space-between;
@@ -20,7 +18,7 @@
   background-color: #ffffff;
 }
 
-/* LEFT (logo + nom) */
+/* Nabar top gauche */
 .navbar-left {
   display: flex;
   align-items: center;
@@ -38,14 +36,14 @@
   color: #222;
 }
 
-/* RIGHT (info + urgence + burger) */
+/* Navbar top droite */
 .navbar-right {
   display: flex;
   align-items: center;
   gap: 16px;
 }
 
-/* Contact info (desktop only) */
+/* Navbar top contact info (sur ordi) */
 .navbar-info {
   text-align: right;
   font-size: 13px;
@@ -57,7 +55,7 @@
   font-size: 16px;
 }
 
-/* Urgence button */
+/* Urgence */
 .urgence-btn {
   font-size: 13px;
   font-weight: 600;
@@ -70,17 +68,7 @@
   transition: 0.2s;
 }
 
-/* Burger menu */
-.burger {
-  font-size: 26px;
-  cursor: pointer;
-  display: none; /* caché desktop */
-  user-select: none;
-}
-
-/* =========================
-   BOTTOM BAR (DESKTOP NAV)
-========================= */
+/* Navbar bottom */
 .navbar-bottom {
   display: flex;
   gap: 25px;
@@ -100,9 +88,15 @@
   text-decoration: underline;
 }
 
-/* =========================
-   MOBILE MENU (HAMBURGER)
-========================= */
+/* Burger */
+
+.burger {
+  font-size: 26px;
+  cursor: pointer;
+  display: none;
+  user-select: none;
+}
+
 .mobile-menu {
   display: flex;
   flex-direction: column;
@@ -119,27 +113,21 @@
   font-weight: 500;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
+/* Version mobile */
 @media (max-width: 768px) {
 
-  /* cacher infos contact sur mobile */
   .navbar-info {
     display: none;
   }
 
-  /* afficher burger */
   .burger {
     display: block;
   }
 
-  /* cacher navbar bottom desktop */
   .navbar-bottom {
     display: none;
   }
 
-  /* ajustement spacing top bar */
   .navbar-top {
     padding: 10px 12px;
   }

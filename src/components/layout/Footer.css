@@ -1,5 +1,6 @@
 /* src/components/layout/Footer.css */
 
+/* Wrapper et container */
 .footer-wrapper {
   background-color: #f8f9fa;
   padding: 20px 0;
@@ -14,7 +15,7 @@
   gap: 20px;
 }
 
-/* LEFT section (infos) */
+/* Gauche */
 .footer-left {
   display: flex;
   flex-direction: column;
@@ -27,12 +28,12 @@
   gap: 6px;
 }
 
-/* ICONS */
+/* Icônes */
 .footer-icon {
   font-size: 16px;
 }
 
-/* RIGHT section (nav links) */
+/* Droite */
 .footer-right {
   display: flex;
   gap: 15px;
@@ -48,7 +49,7 @@
   text-decoration: underline;
 }
 
-/* ======= RESPONSIVE ======= */
+/* Version mobile */
 @media (max-width: 768px) {
   .footer-container {
     flex-direction: column;

@@ -2,10 +2,10 @@
 import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import Layout from '../components/layout/Layout';
-import service1 from '../assets/images/service1.jpg';
-import service2 from '../assets/images/service2.jpg';
-import service3 from '../assets/images/service3.jpg';
-import service4 from '../assets/images/service4.jpg';
+import service1 from '../images/service1.jpg';
+import service2 from '../images/service2.jpg';
+import service3 from '../images/service3.jpg';
+import service4 from '../images/service4.jpg';
 import { useNavigate } from 'react-router-dom';
 
 function Services() {
@@ -32,9 +32,20 @@ function Services() {
             <img src={service2} className="service-img" alt="Service 2" />
           </Col>
           <Col md={6}>
-            <h4>Consultation générale</h4>
+            <h4>Examen général</h4>
             <p>Examens complets pour vos animaux.</p>
-            <Button variant="primary" onClick={() => navigate('/appointment')}>Prendre rendez-vous</Button>
+            <Button
+              variant="primary"
+              onClick={() =>
+                navigate('/appointment', {
+                  state: {
+                    service: 'Examen général'
+                  }
+                })
+              }
+            >
+              Prendre rendez-vous
+            </Button>
           </Col>
         </Row>
 
@@ -45,7 +56,18 @@ function Services() {
           <Col md={6}>
             <h4>Toilettage</h4>
             <p>Soins de toilettage complets.</p>
-            <Button variant="primary" onClick={() => navigate('/appointment')}>Prendre rendez-vous</Button>
+            <Button
+              variant="primary"
+              onClick={() =>
+                navigate('/appointment', {
+                  state: {
+                    service: 'Toilettage'
+                  }
+                })
+              }
+            >
+              Prendre rendez-vous
+            </Button>
           </Col>
         </Row>
 
@@ -56,7 +78,18 @@ function Services() {
           <Col md={6}>
             <h4>Vaccination</h4>
             <p>Prévention et santé à long terme.</p>
-            <Button variant="primary" onClick={() => navigate('/appointment')}>Prendre rendez-vous</Button>
+            <Button
+              variant="primary"
+              onClick={() =>
+                navigate('/appointment', {
+                  state: {
+                    service: 'Vaccination'
+                  }
+                })
+              }
+            >
+              Prendre rendez-vous
+            </Button>
           </Col>
         </Row>
       </Container>

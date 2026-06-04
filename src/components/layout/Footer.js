@@ -7,10 +7,7 @@ import { Telephone, GeoAlt, Clock } from 'react-bootstrap-icons';
 function Footer() {
   return (
     <footer className="footer-wrapper">
-
       <Container className="footer-container">
-
-        {/* LEFT / TOP */}
         <div className="footer-left">
           <div className="footer-item">
             <Telephone className="footer-icon" />
@@ -30,15 +27,12 @@ function Footer() {
           </div>
         </div>
 
-        {/* RIGHT / BOTTOM */}
         <div className="footer-right">
           <a href="/about">À propos</a>
           <a href="/services">Nos services</a>
           <a href="/contact">Contactez-nous</a>
         </div>
-
       </Container>
-
     </footer>
   );
 }
