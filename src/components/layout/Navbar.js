@@ -1,20 +1,29 @@
 // src/components/layout/Navbar.js
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from 'react-bootstrap';
 import './Navbar.css';
 import logo from '../../images/logo.png';
-import { Telephone, GeoAlt } from 'react-bootstrap-icons';
+import { Telephone, GeoAlt, Moon, Sun } from 'react-bootstrap-icons';
 import { useNavigate } from 'react-router-dom';
 
 function Navbar() {
+  const [darkMode, setDarkMode] = useState(false);
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
+
+  useEffect(() => {
+  if (darkMode) {
+    document.body.classList.add("dark");
+  } else {
+    document.body.classList.remove("dark");
+  }
+}, [darkMode]);
 
   return (
     <div className="navbar-wrapper">
       <div className="navbar-top">
         <div className="navbar-left">
-          <a href="/">
+          <a href="/" class="text-decoration-none">
             <img src={logo} alt="Logo" className="logo" />
             <span className="brand-name">Clinique Vétérinaire Friends&Pets</span>
           </a>
@@ -23,16 +32,25 @@ function Navbar() {
         <div className="navbar-right">
           <div className="navbar-info">
             <div>
-              <Telephone className="navbar-icon" />
-              <span>(613) 123-4567</span>
+              <a href="tel:6131234567" class="text-decoration-none">
+                <Telephone className="navbar-icon" />
+                <span>(613) 123-4567</span>
+              </a>  
             </div>
+
             <div>
-              <GeoAlt className="navbar-icon" />
-              <span>Ottawa, ON</span>
+              <a href="https://maps.google.com" class="text-decoration-none">
+                <GeoAlt className="navbar-icon" />
+                <span>1234 rue des Animaux, Ottawa, ON, A1B 2C3</span>
+              </a>
             </div>
           </div>
 
-          <Button variant="danger" className="urgence-btn" onClick={() => navigate('/emergency')}>URGENCE</Button>
+          <Button variant="danger" className="urgence-btn" onClick={() => navigate('/emergency')}>URGENCE 24/7</Button>
+
+          <Button onClick={() => setDarkMode(prev => !prev)} className="btn btn-sm btn-outline-secondary darkmode" >
+            {darkMode ? <Sun /> : <Moon />}
+          </Button>
 
           <div className="burger" onClick={() => setOpen(!open)}>☰</div>
         </div>

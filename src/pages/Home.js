@@ -80,7 +80,7 @@ function Home() {
   return (
   <Layout>
     <div className="home-desktop">
-      <Container>
+      <Container className="home">
         <Row className="align-items-center my-5">
           <Col md={6}>
             <h1>Clinique Vétérinaire</h1>
@@ -99,6 +99,20 @@ function Home() {
                 Prendre rendez-vous
               </Button>
             </div>
+            <div className="mt-3">
+              <Button size="sm" className="ms-3" variant="outline-primary">
+                Itinéraire
+              </Button>
+              <GeoAlt className="me-1" />
+              123 Rue des Animaux, Montréal
+            </div>
+            <div className="mt-3">
+              <Button size="sm" className="ms-3" variant="outline-secondary">
+                Appeler
+              </Button>
+              <Telephone className="me-1" />
+              (514) 123-4567
+            </div>
           </Col>
           <Col md={6}>
             <div className="home-image-wrapper">
@@ -107,14 +121,10 @@ function Home() {
           </Col>
         </Row>
 
-        <div className="home-info p-3 bg-light rounded">
-          <Row>
-            <Col md={6} className="mb-2">
-              <GeoAlt className="me-1" />
-              123 Rue des Animaux, Montréal
-              <Button size="sm" className="ms-3" variant="outline-primary">
-                Itinéraire
-              </Button>
+        {/* <div className="home-info p-3 bg-light rounded"> */}
+          {/* <Row> */}
+            {/* <Col md={6} className="mb-2">
+              
             </Col>
             <Col md={6}>
               <Telephone className="me-1" />
@@ -122,9 +132,9 @@ function Home() {
               <Button size="sm" className="ms-3" variant="outline-secondary">
                 Appeler
               </Button>
-            </Col>
-          </Row>
-        </div>
+            </Col> */}
+          {/* </Row> */}
+        {/* </div> */}
       </Container>
     </div>
   </Layout>

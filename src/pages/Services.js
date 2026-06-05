@@ -22,8 +22,8 @@ function Services() {
           </Col>
           <Col md={6}>
             <h4>Urgences</h4>
-            <p>Soins rapides et disponibles 24/7.</p>
-            <Button variant="danger" onClick={() => navigate('/emergency')}>Accéder à l'urgence</Button>
+            <p>Soins rapides et disponibles 24/7. Remplir le formulaire de consultation d'urgence ci-dessous pour accélérer le processus lorsque vous êtes rendus sur place.</p>
+            <Button variant="danger" onClick={() => navigate('/emergency')}>Formulaire de consultation d'urgence</Button>
           </Col>
         </Row>
 

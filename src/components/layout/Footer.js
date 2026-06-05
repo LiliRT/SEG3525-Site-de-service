@@ -11,19 +11,19 @@ function Footer() {
         <div className="footer-left">
           <div className="footer-item">
             <Telephone className="footer-icon" />
-            <span>(613) 123-4567</span>
+            <a href="tel:6131234567">(613) 123-4567</a>
           </div>
           <div className="footer-item">
             <GeoAlt className="footer-icon" />
-            <span>Ottawa, ON</span>
+            <a href="https://maps.google.com">1234 rue des Animaux, Ottawa, ON, A1B 2C3</a>
           </div>
           <div className="footer-item">
             <Clock className="footer-icon" />
             <span>Ouvert tous les jours 8h – 18h</span>
           </div>
           <div className="footer-item">
-            <Clock className="footer-icon" />
-            <span>Urgence 24/7</span>
+            <Clock className="footer-icon urgence-icon" />
+            <strong class="text-danger">Urgence 24/7</strong>
           </div>
         </div>
 
