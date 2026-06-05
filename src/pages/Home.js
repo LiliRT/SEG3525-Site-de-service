@@ -88,25 +88,33 @@ function Home() {
             <div className="mt-3">
               <Button className="me-2 bouton-urgence" onClick={() => navigate('/emergency')}>
                 <ExclamationTriangle className="me-1" />
-                URGENCE
+                <strong>URGENCE</strong>
               </Button>
               <Button className="bouton" onClick={() => navigate('/appointment')}>
                 Prendre rendez-vous
               </Button>
             </div>
             <div className="mt-3">
+              <p>
+                <GeoAltFill className="me-2 contact-icon" />
+                1234 rue des Animaux,
+                Ottawa, ON, A1B 2C3
+              </p>
+
+              <p>
+                <TelephoneFill className="me-2 contact-icon" />
+                (613) 123-4567
+              </p>
+            </div>
+            <div className="mt-3 d-flex flex-wrap gap-2">
               <Button className="bouton" href="tel:6131234567">
                 <TelephoneFill className="me-1" />
                 Appeler
               </Button>
-              <p>(613) 123-4567</p>
-            </div>
-            <div className="mt-3">
               <Button className="bouton" href="https://www.google.com/maps">
                 <GeoAltFill className="me-1" />
                 Itinéraire
               </Button>
-              <p>123 Rue des Animaux, Montréal</p>
             </div>
           </Col>
           <Col md={6}>

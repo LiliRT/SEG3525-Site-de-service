@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   border-bottom: 1px solid var(--color-border);
-  font-family: Arial, sans-serif;
+  font-family: var(--font-main);
 }
 
 /* TOP */
@@ -47,7 +47,7 @@
 .navbar-info a {
   text-align: right;
   font-size: 16px;
-  line-height: 1.2;
+  line-height: 1.2rem;
   color: var(--color-primary);
   line-height: 20px;
   text-decoration: none;
@@ -56,11 +56,6 @@
 .navbar-info a:hover {
   text-decoration: underline;
   color: var(--color-accent);
-}
-
-.darkmode {
-  background-color: var(--color-primary-dark);
-  color: var(--color-bg);
 }
 
 /* URGENCE */

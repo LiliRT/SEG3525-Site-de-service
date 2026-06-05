@@ -17,7 +17,7 @@
   --color-card: #ffffff;
   --color-border: #dee2e6;
 
-  --font-main: Arial, sans-serif;
+  --font-main: Inter, sans-serif;
 
   --font-sm: 0.875rem;
   --font-md: 1rem;
@@ -38,8 +38,6 @@ body.dark {
 
   --color-primary: #8ecae6;
   --color-primary-dark: #219ebc;
-  --color-accent: #ffb703;
-  --color-warning: #fb8500;
 }
 
 /* =========================
@@ -61,6 +59,7 @@ body {
 
 .bouton:hover {
   background-color: var(--color-primary);
+  color: var(--color-bg);
   transform: scale(1.08);
   transition: 0.2s;
 }
@@ -71,13 +70,13 @@ body {
 
 .bouton-urgence {
   background-color: var(--color-warning);
-  color: var(--color-bg);
+  color: white;
   border: none;
 }
 
 .bouton-urgence:hover {
   background-color: var(--color-warning);
-  color: var(--color-bg);
+  color: white;
   transform: scale(1.08);
   transition: 0.2s;
 }
@@ -365,6 +364,18 @@ body {
   height: 450px;
   object-fit: cover;
   border-radius: 12px;
+}
+
+.contact-icon {
+  color: var(--color-primary);
+}
+
+/* =========================
+   Formulaires
+========================= */
+
+.form {
+  font-weight: bold;
 }
 
 /* =========================

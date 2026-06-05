@@ -2,7 +2,7 @@
 import React from 'react';
 import Layout from '../components/layout/Layout';
 import { Container, Row, Col, Button, Card } from 'react-bootstrap';
-import { GeoAltFill, TelephoneFill, ClockFill, SignpostFill } from 'react-bootstrap-icons';
+import { GeoAltFill, TelephoneFill, ClockFill } from 'react-bootstrap-icons';
 import clinicImage from '../images/clinic.jpg';
 
 function Contact() {
@@ -15,25 +15,25 @@ function Contact() {
 
         <Row className="align-items-center">
           <Col xs={{ order: 1 }} md={{ order: 2 }} lg={6}>
-            <Card className="border-0 shadow-sm p-4">
+            <Card className="border-0 shadow-sm p-4 carte">
               <h3 className="mb-4">
                 Clinique Vétérinaire Friends&Pets
               </h3>
 
               <p>
-                <GeoAltFill className="me-2 text-primary" />
+                <GeoAltFill className="me-2 contact-icon" />
                 1234 rue des Animaux,
                 Ottawa, ON, A1B 2C3
               </p>
 
               <p>
-                <TelephoneFill className="me-2 text-primary" />
+                <TelephoneFill className="me-2 contact-icon" />
                 (613) 123-4567
               </p>
 
               <div className="mb-4">
                 <h5>
-                  <ClockFill className="me-2" />
+                  <ClockFill className="me-2 contact-icon" />
                   Heures d'ouverture
                 </h5>
 
@@ -55,7 +55,7 @@ function Contact() {
                 </Button>
 
                 <Button className="bouton" href="https://maps.google.com" target="_blank">
-                  <SignpostFill className="me-2" />
+                  <GeoAltFill className="me-2" />
                   Itinéraire
                 </Button>
               </div>
