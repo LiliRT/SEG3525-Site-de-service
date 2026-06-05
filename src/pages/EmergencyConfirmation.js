@@ -2,6 +2,7 @@
 import React from 'react';
 import Layout from '../components/layout/Layout';
 import { Container, Button, Row, Col } from 'react-bootstrap';
+import { TelephoneFill, GeoAltFill } from 'react-bootstrap-icons';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 function EmergencyConfirmation() {
@@ -60,18 +61,17 @@ function EmergencyConfirmation() {
         </Row>
 
         <div className="d-flex flex-wrap gap-2 mt-5">
-          <Button variant="primary" href="tel:6131234567">
+          <Button className="bouton" href="tel:6131234567">
+            <TelephoneFill className="me-1" />
             Appeler
           </Button>
 
-          <Button variant="secondary" href="https://maps.google.com" target="_blank">
+          <Button className="bouton" href="https://www.google.com/maps">
+            <GeoAltFill className="me-1" />
             Itinéraire
           </Button>
 
-          <Button
-            variant="outline-primary"
-            onClick={() => navigate('/')}
-          >
+          <Button className="bouton" onClick={() => navigate('/')}>
             Retour à l'accueil
           </Button>
 

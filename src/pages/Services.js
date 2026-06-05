@@ -23,7 +23,8 @@ function Services() {
           <Col md={6}>
             <h4>Urgences</h4>
             <p>Soins rapides et disponibles 24/7. Remplir le formulaire de consultation d'urgence ci-dessous pour accélérer le processus lorsque vous êtes rendus sur place.</p>
-            <Button variant="danger" onClick={() => navigate('/emergency')}>Formulaire de consultation d'urgence</Button>
+            <Button 
+              className="bouton-urgence" onClick={() => navigate('/emergency')}>Formulaire de consultation d'urgence</Button>
           </Col>
         </Row>
 
@@ -35,6 +36,7 @@ function Services() {
             <h4>Examen général</h4>
             <p>Examens complets pour vos animaux.</p>
             <Button
+              className="bouton"
               variant="primary"
               onClick={() =>
                 navigate('/appointment', {
@@ -57,6 +59,7 @@ function Services() {
             <h4>Toilettage</h4>
             <p>Soins de toilettage complets.</p>
             <Button
+              className="bouton"
               variant="primary"
               onClick={() =>
                 navigate('/appointment', {
@@ -79,6 +82,7 @@ function Services() {
             <h4>Vaccination</h4>
             <p>Prévention et santé à long terme.</p>
             <Button
+              className="bouton"
               variant="primary"
               onClick={() =>
                 navigate('/appointment', {

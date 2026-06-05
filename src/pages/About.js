@@ -52,7 +52,7 @@ function About() {
           <Col md={5} className="text-center">
             <img src={vet1} alt="Dre Martin" className="vet-img" />
             <h5 className="mt-2">Dre. Martin</h5>
-            <p className="text-muted">Médecine générale et vaccination</p>
+            <p>Médecine générale et vaccination</p>
             <p className="text-start">
               Passionnée par le bien-être animal depuis l’enfance, elle accompagne les animaux
               et leurs familles avec douceur et précision. Elle se spécialise dans la prévention
@@ -63,7 +63,7 @@ function About() {
           <Col md={5} className="text-center">
             <img src={vet2} alt="Dr Lopez" className="vet-img" />
             <h5 className="mt-2">Dr. Lopez</h5>
-            <p className="text-muted">Urgences et soins intensifs</p>
+            <p>Urgences et soins intensifs</p>
             <p className="text-start">
               Habitué aux situations critiques, il intervient sur les cas urgents avec sang-froid
               et expertise. Son objectif : stabiliser rapidement les animaux et maximiser leurs chances de rétablissement.

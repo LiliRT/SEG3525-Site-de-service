@@ -2,7 +2,7 @@
 import React from 'react';
 import Layout from '../components/layout/Layout';
 import { Container, Card, Button, Row, Col } from 'react-bootstrap';
-import { CheckCircleFill, Telephone, GeoAlt, CalendarPlus } from 'react-bootstrap-icons';
+import { CheckCircleFill, TelephoneFill, GeoAltFill, CalendarPlus } from 'react-bootstrap-icons';
 import { useLocation, useNavigate } from 'react-router-dom';
 import AppointmentStepper from '../components/forms/AppointmentStepper';
 
@@ -24,7 +24,7 @@ function AppointmentConfirmation() {
           <CheckCircleFill size={90} color="green"/>
         </div>
 
-        <Card className="p-4">
+        <Card className="p-4 carte">
           <Row>
             <Col md={6}>
               <p>
@@ -58,29 +58,29 @@ function AppointmentConfirmation() {
 
         <Row className="g-2 mt-4">
           <Col md={3}>
-            <Button className="w-100">
+            <Button className="w-100 bouton">
               <CalendarPlus className="me-2" />
               Calendrier
             </Button>
           </Col>
 
           <Col md={3}>
-            <Button className="w-100" variant="outline-primary" onClick={() => navigate('/appointment')}>
-              Nouveau RDV
+            <Button className="w-100 bouton" onClick={() => navigate('/appointment')}>
+              Prendre un nouveau RDV
             </Button>
           </Col>
 
           <Col md={3}>
-            <Button className="w-100" variant="outline-success">
-              <GeoAlt className="me-2" />
-              Itinéraire
-            </Button>
-          </Col>
-
-          <Col md={3}>
-            <Button className="w-100" variant="outline-secondary">
-              <Telephone className="me-2" />
+            <Button className="w-100 bouton" href="tel:6131234567">
+              <TelephoneFill className="me-2" />
               Appeler
+            </Button>
+          </Col>
+
+          <Col md={3}>
+            <Button className="w-100 bouton" href="https://www.google.com/maps">
+              <GeoAltFill className="me-2" />
+              Itinéraire
             </Button>
           </Col>
         </Row>

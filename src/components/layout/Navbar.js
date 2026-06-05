@@ -25,28 +25,28 @@ function Navbar() {
         <div className="navbar-left">
           <a href="/" class="text-decoration-none">
             <img src={logo} alt="Logo" className="logo" />
-            <span className="brand-name">Clinique Vétérinaire Friends&Pets</span>
+            <span className="brand-name"> Clinique Vétérinaire Friends&Pets</span>
           </a>
         </div>
 
         <div className="navbar-right">
           <div className="navbar-info">
             <div>
-              <a href="tel:6131234567" class="text-decoration-none">
+              <a href="tel:6131234567">
                 <Telephone className="navbar-icon" />
                 <span>(613) 123-4567</span>
               </a>  
             </div>
 
             <div>
-              <a href="https://maps.google.com" class="text-decoration-none">
+              <a href="https://maps.google.com">
                 <GeoAlt className="navbar-icon" />
-                <span>1234 rue des Animaux, Ottawa, ON, A1B 2C3</span>
+                <span>123 rue des Animaux, Ottawa, ON, A1B 2C3</span>
               </a>
             </div>
           </div>
 
-          <Button variant="danger" className="urgence-btn" onClick={() => navigate('/emergency')}>URGENCE 24/7</Button>
+          <Button variant="danger" className="urgence-btn bouton-urgence" onClick={() => navigate('/emergency')}>URGENCE 24/7</Button>
 
           <Button onClick={() => setDarkMode(prev => !prev)} className="btn btn-sm btn-outline-secondary darkmode" >
             {darkMode ? <Sun /> : <Moon />}

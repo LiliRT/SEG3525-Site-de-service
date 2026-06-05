@@ -49,12 +49,12 @@ function Contact() {
               </div>
 
               <div className="d-flex flex-wrap gap-2">
-                <Button variant="success" href="tel:6131234567">
+                <Button className="bouton" href="tel:6131234567">
                   <TelephoneFill className="me-2" />
                   Appeler
                 </Button>
 
-                <Button variant="primary" href="https://maps.google.com" target="_blank">
+                <Button className="bouton" href="https://maps.google.com" target="_blank">
                   <SignpostFill className="me-2" />
                   Itinéraire
                 </Button>

@@ -11,7 +11,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 16px;
+  padding: 26px 36px;
   background-color: var(--color-card);
 }
 
@@ -28,7 +28,7 @@
 .brand-name {
   font-size: 18px;
   font-weight: 600;
-  color: var(--color-text);
+  color: var(--color-primary);
 }
 
 .navbar-right {
@@ -39,22 +39,28 @@
 
 .navbar-info {
   text-align: right;
-  font-size: 13px;
+  font-size: 16px;
   line-height: 1.2;
   color: var(--color-primary);
 }
 
 .navbar-info a {
   text-align: right;
-  font-size: 13px;
+  font-size: 16px;
   line-height: 1.2;
   color: var(--color-primary);
   line-height: 20px;
+  text-decoration: none;
+}
+
+.navbar-info a:hover {
+  text-decoration: underline;
+  color: var(--color-accent);
 }
 
 .darkmode {
   background-color: var(--color-primary-dark);
-  color: var(--color-soft);
+  color: var(--color-bg);
 }
 
 /* URGENCE */
@@ -62,14 +68,12 @@
   font-size: 13px;
   font-weight: 600;
   padding: 6px 12px;
-  background-color: var(--color-warning);
   border: none;
-  color: white;
 }
 
 .urgence-btn:hover {
   opacity: 0.9;
-  transform: scale(1.02);
+  transform: scale(1.1);
   transition: 0.2s;
 }
 
@@ -77,16 +81,16 @@
 .navbar-bottom {
   display: flex;
   gap: 25px;
-  padding: 10px 16px;
-  background-color: var(--color-bg);
+  padding: 16px 36px;
+  background-color: var(--color-primary);
   border-top: 1px solid var(--color-border);
 }
 
 .navbar-bottom a {
   text-decoration: none;
-  color: var(--color-text);
+  color: var(--color-bg);
   font-weight: 500;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .navbar-bottom a:hover {

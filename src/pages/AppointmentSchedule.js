@@ -117,7 +117,7 @@ function AppointmentSchedule() {
 
         <AppointmentStepper currentStep={2} />
 
-        <Card className="p-3 mb-4">
+        <Card className="p-3 mb-4 carte">
           <h5>Informations du rendez-vous</h5>
 
           <p>
@@ -134,14 +134,14 @@ function AppointmentSchedule() {
           </p>
         </Card>
 
-        <div className="d-flex justify-content-between align-items-center mb-3">
-          <Button variant="outline-secondary" onClick={previousMonth} disabled={isCurrentMonth}>
+        <div className="d-flex justify-content-center align-items-center gap-3 mb-3">
+          <Button className="bouton" onClick={previousMonth} disabled={isCurrentMonth}>
             <ChevronLeft />
           </Button>
 
           <h4 className="mb-0"> {monthNames[month]} {year} </h4>
 
-          <Button variant="outline-secondary" onClick={nextMonth}>
+          <Button className="bouton" onClick={nextMonth}>
             <ChevronRight />
           </Button>
         </div>
@@ -210,7 +210,7 @@ function AppointmentSchedule() {
         )}
 
         {selectedDay && selectedTime && (
-          <Card className="mt-4 p-3">
+          <Card className="mt-4 p-3 carte">
             <strong>
               Rendez-vous sélectionné
             </strong>
@@ -224,11 +224,12 @@ function AppointmentSchedule() {
         )}
 
         <div className="d-flex justify-content-between mt-5">
-          <Button variant="secondary" onClick={ () => navigate('/appointment', { state: formData }) }>
+          <Button className="bouton" onClick={ () => navigate('/appointment', { state: formData }) }>
             Retour
           </Button>
 
           <Button
+            className="bouton"
             disabled={
               !selectedDay ||
               !selectedTime

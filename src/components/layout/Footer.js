@@ -15,7 +15,7 @@ function Footer() {
           </div>
           <div className="footer-item">
             <GeoAlt className="footer-icon" />
-            <a href="https://maps.google.com">1234 rue des Animaux, Ottawa, ON, A1B 2C3</a>
+            <a href="https://maps.google.com">123 rue des Animaux, Ottawa, ON, A1B 2C3</a>
           </div>
           <div className="footer-item">
             <Clock className="footer-icon" />
@@ -23,7 +23,7 @@ function Footer() {
           </div>
           <div className="footer-item">
             <Clock className="footer-icon urgence-icon" />
-            <strong class="text-danger">Urgence 24/7</strong>
+            <a href="/emergency"><strong class="text-danger">URGENCE 24/7</strong></a>
           </div>
         </div>
 
