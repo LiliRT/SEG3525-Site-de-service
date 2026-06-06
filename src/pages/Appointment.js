@@ -19,7 +19,7 @@ function Appointment() {
 
   return (
     <Layout>
-      <Container className="my-5">
+      <Container className="my-5 form">
         <h2 className="mb-4">
           Prendre un rendez-vous
         </h2>

@@ -15,7 +15,7 @@ function Emergency() {
 
   return (
     <Layout>
-      <Container className="my-5">
+      <Container className="my-5 form">
         <h1 className="mb-4 text-danger">
           Consultation d'urgence
         </h1>

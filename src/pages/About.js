@@ -2,13 +2,12 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import Layout from '../components/layout/Layout';
-import vet1 from '../images/vet1.jpg';
-import vet2 from '../images/vet2.jpg';
+import { PersonCircle } from 'react-bootstrap-icons';
 
 function About() {
   return (
     <Layout>
-      <Container className="my-5">
+      <Container className="my-5 service">
         <h1 className="mb-4">À propos de nous</h1>
 
         <div className="timeline">
@@ -50,7 +49,7 @@ function About() {
 
         <Row className="mt-5 justify-content-center">
           <Col md={5} className="text-center">
-            <img src={vet1} alt="Dre Martin" className="vet-img" />
+            <PersonCircle size={150}/>
             <h5 className="mt-2">Dre. Martin</h5>
             <p>Médecine générale et vaccination</p>
             <p className="text-start">
@@ -61,7 +60,7 @@ function About() {
           </Col>
 
           <Col md={5} className="text-center">
-            <img src={vet2} alt="Dr Lopez" className="vet-img" />
+            <PersonCircle size={150}/>
             <h5 className="mt-2">Dr. Lopez</h5>
             <p>Urgences et soins intensifs</p>
             <p className="text-start">

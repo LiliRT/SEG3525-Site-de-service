@@ -38,12 +38,12 @@ function Home() {
         <div className="home-mobile-hero">
           <img src={heroImage} alt="Clinique" />
           <div className="home-mobile-overlay">
-            <h2>Clinique Vétérinaire Friends&Pets</h2>
+            <h2>Clinique Vétérinaire<br/>Friends&Pets</h2>
             <p>{slogans[current]}</p>
           </div>
         </div>
 
-        <Container className="mt-3">
+        <Container className="mt-3 home-mobile-info">
           <Row className="g-2">
             <Col xs={6}>
               <Button className="w-100 bouton-urgence" onClick={() => navigate('/emergency')}>
@@ -96,14 +96,14 @@ function Home() {
             </div>
             <div className="mt-3">
               <p>
-                <GeoAltFill className="me-2 contact-icon" />
-                1234 rue des Animaux,
-                Ottawa, ON, A1B 2C3
+                <TelephoneFill className="me-2 contact-icon" />
+                (613) 123-4567
               </p>
 
               <p>
-                <TelephoneFill className="me-2 contact-icon" />
-                (613) 123-4567
+                <GeoAltFill className="me-2 contact-icon" />
+                1234 rue des Animaux,
+                Ottawa, ON, A1B 2C3
               </p>
             </div>
             <div className="mt-3 d-flex flex-wrap gap-2">
@@ -117,6 +117,7 @@ function Home() {
               </Button>
             </div>
           </Col>
+          
           <Col md={6}>
             <div className="home-image-wrapper">
               <img src={heroImage} alt="Clinique" />

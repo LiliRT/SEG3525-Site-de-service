@@ -1,7 +1,7 @@
 // src/pages/AppointmentSchedule.js
 import React, { useState } from 'react';
 import Layout from '../components/layout/Layout';
-import { Container, Button, Card, Row, Col } from 'react-bootstrap';
+import { Container, Badge, Button, Card, Row, Col } from 'react-bootstrap';
 import { ChevronLeft, ChevronRight } from 'react-bootstrap-icons';
 import { useLocation, useNavigate } from 'react-router-dom';
 import AppointmentStepper from '../components/forms/AppointmentStepper';
@@ -108,30 +108,73 @@ function AppointmentSchedule() {
     });
   };
 
+  const getFullDateLabel = () => {
+    if (!selectedDay) return '';
+
+    const date = new Date(year, month, selectedDay);
+
+    const weekDaysFull = [
+      'Dimanche',
+      'Lundi',
+      'Mardi',
+      'Mercredi',
+      'Jeudi',
+      'Vendredi',
+      'Samedi'
+    ];
+
+    return `${weekDaysFull[date.getDay()]} ${selectedDay} ${monthNames[month]} ${year}`;
+  };
+
   return (
     <Layout>
-      <Container className="my-5">
+      <Container className="my-5 form">
         <h2 className="mb-3">
           Choisir un horaire
         </h2>
 
         <AppointmentStepper currentStep={2} />
 
-        <Card className="p-3 mb-4 carte">
-          <h5>Informations du rendez-vous</h5>
+        <Card className="p-4 mb-4 carte appointment-summary">
+          <div className="d-flex justify-content-center align-items-center gap-2 mb-3">
+            <h5 className="mb-0">Résumé du rendez-vous</h5>
+            <Badge className="service-badge">{formData.service}</Badge>
+          </div>
 
-          <p>
-            <strong>Service :</strong> {formData.service}
-          </p>
+          <Row className="summary-row g-3">
+            <Col xs={12} md={6}>
+              <div className="summary-section">
+                <h6>Propriétaire</h6>
 
-          <p>
-            <strong>Animal :</strong>{' '}
-            {formData.animalType === 'Autre' ? formData.otherAnimalType : formData.animalType}
-          </p>
+                <p><strong>Nom :</strong> {formData.ownerName}</p>
+                <p><strong>Email :</strong> {formData.email}</p>
+                <p><strong>Téléphone :</strong> {formData.phone}</p>
+                <p>
+                  <strong>Nouveau client :</strong>{" "}
+                  {formData.newClient === "yes" ? "Oui" : "Non"}
+                </p>
+              </div>
+            </Col>
 
-          <p>
-            <strong>Race :</strong> {formData.breed}
-          </p>
+            <Col xs={12} md={6}>
+              <div className="summary-section">
+                <h6>Animal</h6>
+
+                <p><strong>Nom :</strong> {formData.animalName}</p>
+                <p><strong>Âge :</strong> {formData.animalAge}</p>
+
+                <p>
+                  <strong>Type :</strong>{" "}
+                  {formData.animalType === "Autre"
+                    ? formData.otherAnimalType
+                    : formData.animalType}
+                </p>
+
+                <p><strong>Race :</strong> {formData.breed || "—"}</p>
+                <p><strong>Poids :</strong> {formData.weight}</p>
+              </div>
+            </Col>
+          </Row>
         </Card>
 
         <div className="d-flex justify-content-center align-items-center gap-3 mb-3">
@@ -161,12 +204,9 @@ function AppointmentSchedule() {
               <div key={index} className="calendar-cell">
                 {day && (
                   <Button
-                    className="calendar-button"
-                    variant={
-                      selectedDay === day
-                        ? 'primary'
-                        : 'outline-primary'
-                    }
+                    className={`calendar-button ${
+                      selectedDay === day ? 'selected' : ''
+                    }`}
                     disabled={isPastDay}
                     onClick={() => {
                       setSelectedDay(day);
@@ -184,10 +224,10 @@ function AppointmentSchedule() {
         {selectedDay && (
           <>
             <h5 className="mt-5">
-              Disponibilités du {selectedDay}
+                Disponibilités du {selectedDay} {monthNames[month]} {year}
             </h5>
 
-            <Row className="g-2 mt-2">
+            <Row className="g-2 mt-2 d-none d-md-flex">
               {slots.map(slot => (
                 <Col md={2} xs={6} key={slot}>
                   <Button
@@ -206,6 +246,19 @@ function AppointmentSchedule() {
                 </Col>
               ))}
             </Row>
+
+            <div className="slots-mobile d-md-none mt-2">
+              {slots.map(slot => (
+                <Button
+                  key={slot}
+                  className="w-100"
+                  variant={selectedTime === slot ? "success" : "outline-success"}
+                  onClick={() => setSelectedTime(slot)}
+                >
+                  {slot}
+                </Button>
+              ))}
+            </div>
           </>
         )}
 
@@ -216,9 +269,7 @@ function AppointmentSchedule() {
             </strong>
 
             <p className="mb-0 mt-2">
-              {selectedDay} {monthNames[month]} {year}
-              {' à '}
-              {selectedTime}
+              {getFullDateLabel()} à {selectedTime}
             </p>
           </Card>
         )}

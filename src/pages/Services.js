@@ -13,7 +13,7 @@ function Services() {
 
   return (
     <Layout>
-      <Container className="my-5">
+      <Container className="my-5 service">
         <h1 className="mb-4">Nos services</h1>
 
         <Row className="service-row align-items-center mb-4">
@@ -28,13 +28,15 @@ function Services() {
           </Col>
         </Row>
 
+        <hr/>
+
         <Row className="service-row align-items-center mb-4 flex-md-row-reverse">
           <Col md={6}>
             <img src={service2} className="service-img" alt="Service 2" />
           </Col>
           <Col md={6}>
             <h4>Examen général</h4>
-            <p>Examens complets pour vos animaux.</p>
+            <p>Examens complets et réguliers pour assurer la santé optimale de votre animal.</p>
             <Button
               className="bouton"
               variant="primary"
@@ -51,13 +53,15 @@ function Services() {
           </Col>
         </Row>
 
+        <hr/>
+
         <Row className="service-row align-items-center mb-4">
           <Col md={6}>
             <img src={service3} className="service-img" alt="Service 3" />
           </Col>
           <Col md={6}>
             <h4>Toilettage</h4>
-            <p>Soins de toilettage complets.</p>
+            <p>Soins de toilettage professionnels adaptés à chaque type d’animal.</p>
             <Button
               className="bouton"
               variant="primary"
@@ -74,13 +78,15 @@ function Services() {
           </Col>
         </Row>
 
+        <hr/>
+
         <Row className="service-row align-items-center mb-4 flex-md-row-reverse">
           <Col md={6}>
             <img src={service4} className="service-img" alt="Service 4" />
           </Col>
           <Col md={6}>
             <h4>Vaccination</h4>
-            <p>Prévention et santé à long terme.</p>
+            <p>Programme de vaccination complet pour protéger votre animal contre les maladies courantes et graves.</p>
             <Button
               className="bouton"
               variant="primary"

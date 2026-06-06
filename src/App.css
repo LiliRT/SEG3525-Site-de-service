@@ -91,15 +91,14 @@ body {
 ========================= */
 
 .home {
-  padding: 2rem 3.5rem;
+  padding: 1rem 4.5rem;
 }
 
 .home-image-wrapper {
-  width: 100%;
-  max-width: 600px;
-  height: 600px;
+  max-width: 800px;
+  height: 500px;
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 15px;
   display: flex;
   margin: auto;
 }
@@ -113,7 +112,7 @@ body {
 
 .home-mobile-hero {
   position: relative;
-  height: 300px;
+  height: 500px;
 }
 
 .home-mobile-hero img {
@@ -139,6 +138,11 @@ body {
   background-color: var(--color-card);
 }
 
+.home-mobile-info {
+  padding: 2rem 1rem;
+  background-color: var(--color-card);
+}
+
 .home-mobile .btn {
   margin-bottom: 0.5rem;
 }
@@ -148,7 +152,9 @@ body {
 }
 
 .slogan {
-  color: var(--color-text);
+  color: var(--color-primary);
+  padding: 25px 0;
+  font-weight: bold;
 }
 
 /* =========================
@@ -254,26 +260,72 @@ body {
    SERVICES
 ========================= */
 
+.service {
+  max-width: 70%;
+}
+
 .service-img {
   width: 100%;
-  height: 350px;
-  object-fit: cover;
+  height: 320px;
+  object-fit: contain;
   border-radius: 10px;
+  background-color: var(--color-bg);
 }
 
 .service-row {
   padding: 10px 0;
 }
 
+.service-row p {
+  text-align: justify;
+}
+
 /* =========================
-   APPOINTMENT STEPPER
+   APPOINTMENT 
+========================= */
+
+.service-badge {
+  background-color: var(--color-primary) !important;
+  color: var(--color-bg);
+  font-size: 0.85rem;
+  padding: 6px 10px;
+  border-radius: 8px;
+}
+
+/* =========================
+   STEPPER BASE
 ========================= */
 
 .appointment-stepper {
+  margin-bottom: 2.5rem;
+}
+
+/* DESKTOP */
+.stepper-desktop {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 3rem;
+}
+
+.stepper-mobile {
+  display: none;
+  text-align: center;
+  background: var(--color-card);
+  padding: 12px 16px;
+  border-radius: 12px;
+}
+
+.stepper-progress {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
+
+.stepper-label {
+  display: block;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-top: 4px;
 }
 
 .step-item {
@@ -294,7 +346,6 @@ body {
   justify-content: center;
   align-items: center;
   font-weight: bold;
-  transition: all 0.3s ease;
 }
 
 .step-circle.active {
@@ -304,7 +355,7 @@ body {
 }
 
 .step-line {
-  width: 120px;
+  width: 100px;
   height: 4px;
   background: var(--color-border);
   margin-bottom: 28px;
@@ -312,12 +363,6 @@ body {
 
 .step-line.active {
   background: var(--color-primary);
-}
-
-.step-item span {
-  margin-top: 10px;
-  font-size: 0.9rem;
-  text-align: center;
 }
 
 /* =========================
@@ -334,6 +379,7 @@ body {
   text-align: center;
   font-weight: 600;
   padding: 10px;
+  color: var(--color-muted);
 }
 
 .calendar-cell {
@@ -343,16 +389,64 @@ body {
 .calendar-button {
   width: 100%;
   height: 50px;
-  border-color: var(--color-primary);
+  border: 1px solid var(--color-primary) !important;
+  background-color: var(--color-bg) !important;
+  color: var(--color-primary) !important;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.2s ease;
 }
 
 .calendar-button:hover {
-  background-color: var(--color-primary);
+  background-color: var(--color-accent) !important;
+  color: var(--color-bg) !important;
+}
+
+.calendar-button.selected {
+  background-color: var(--color-primary) !important;
+  color: var(--color-bg) !important;
+  border-color: var(--color-primary) !important;
 }
 
 .calendar-button:disabled {
-  opacity: 0.35;
+  opacity: 0.3;
   cursor: not-allowed;
+  background-color: var(--color-bg) !important;
+  color: var(--color-muted) !important;
+  border-color: var(--color-muted) !important;
+}
+
+.appointment-summary {
+  border-radius: 12px;
+}
+
+.summary-section {
+  padding: 10px;
+  border-radius: 10px;
+  background: var(--color-card);
+  height: 100%;
+}
+
+.summary-section h6 {
+  margin-bottom: 10px;
+  color: var(--color-primary);
+}
+
+.summary-section p {
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+}
+
+.summary-row {
+  --bs-gutter-x: 8px;
+}
+
+.summary-row > div {
+  padding-left: 60px;
+  padding-right: 6px;
 }
 
 /* =========================
@@ -376,6 +470,7 @@ body {
 
 .form {
   font-weight: bold;
+  max-width: 70%;
 }
 
 /* =========================
@@ -386,7 +481,7 @@ body {
 
   .home-image-wrapper {
     max-width: 100%;
-    height: 250px;
+    height: 450px;
   }
 
   .timeline {
@@ -395,7 +490,7 @@ body {
   }
 
   .timeline::before {
-    left: 20px;
+    left: -20px;
     transform: none;
   }
 
@@ -406,13 +501,18 @@ body {
   }
 
   .timeline-item::before {
-    left: 10px !important;
+    left: -25px !important;
     right: auto !important;
   }
 
   .vet-img {
     max-width: 160px;
     height: 160px;
+  }
+
+  .service {
+    max-width: 80%;
+    padding: 0 12px;
   }
 
   .service-row {
@@ -425,16 +525,30 @@ body {
     margin-bottom: 10px;
   }
 
-  .step-item {
-    min-width: 80px;
+  .form {
+    max-width: 90%;
+    padding: 0 12px;
   }
 
-  .step-line {
-    width: 50px;
+  .stepper-desktop {
+    display: none;
   }
 
-  .step-item span {
-    font-size: 0.75rem;
+  .stepper-mobile {
+    display: block;
+  }
+
+  .appointment-summary {
+    padding: 16px !important;
+  }
+
+  .summary-section {
+    padding: 12px;
+  }
+
+  .summary-row > div {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
   }
 
   .calendar-grid {
@@ -442,8 +556,14 @@ body {
   }
 
   .calendar-button {
-    height: 40px;
-    font-size: 0.9rem;
+    height: 42px;
+    font-size: 0.85rem;
+  }
+
+  .slots-mobile {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
   }
 
   .contact-img {

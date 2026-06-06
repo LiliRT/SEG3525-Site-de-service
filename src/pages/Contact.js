@@ -3,7 +3,7 @@ import React from 'react';
 import Layout from '../components/layout/Layout';
 import { Container, Row, Col, Button, Card } from 'react-bootstrap';
 import { GeoAltFill, TelephoneFill, ClockFill } from 'react-bootstrap-icons';
-import clinicImage from '../images/clinic.jpg';
+import hero from '../images/hero.jpg';
 
 function Contact() {
   return (
@@ -44,7 +44,7 @@ function Contact() {
                 <br></br>
 
                 <p className="text-danger fw-bold">
-                  Service d'urgence disponible 24 h / 24, 7 j / 7
+                  Service d'urgence disponible 24h / 24, 7j / 7
                 </p>
               </div>
 
@@ -63,7 +63,7 @@ function Contact() {
           </Col>
 
           <Col xs={{ order: 2 }} md={{ order: 1 }} lg={6} className="mt-4 mt-md-0">
-            <img src={clinicImage} alt="Clinique vétérinaire" className="contact-img"/>
+            <img src={hero} alt="Clinique vétérinaire" className="contact-img"/>
           </Col>
         </Row>
       </Container>

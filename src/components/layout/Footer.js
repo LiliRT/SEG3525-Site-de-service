@@ -23,7 +23,7 @@ function Footer() {
           </div>
           <div className="footer-item">
             <Clock className="footer-icon urgence-icon" />
-            <a href="/emergency"><strong class="text-danger">URGENCE 24/7</strong></a>
+            <a href="/emergency"><strong className="text-danger">URGENCE 24/7</strong></a>
           </div>
         </div>
 
