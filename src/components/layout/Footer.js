@@ -2,7 +2,7 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
 import './Footer.css';
-import { Telephone, GeoAlt, Clock } from 'react-bootstrap-icons';
+import { Telephone, GeoAlt, Clock, CodeSlash } from 'react-bootstrap-icons';
 
 function Footer() {
   return (
@@ -24,6 +24,10 @@ function Footer() {
           <div className="footer-item">
             <Clock className="footer-icon urgence-icon" />
             <a href="/emergency"><strong className="text-danger">URGENCE 24/7</strong></a>
+          </div>
+          <div className="footer-item">
+            <CodeSlash className="footer-icon" />
+            <span><a href="https://github.com/LiliRT/SEG3525-Site-de-service">Site conçu par Lili Rose Théoret</a></span>
           </div>
         </div>
 
